@@ -1,0 +1,75 @@
+# Install
+install.packages("tm")  # for text mining
+install.packages("SnowballC") # for text stemming
+install.packages("wordcloud") # word-cloud generator 
+#install.packages("RColorBrewer") # color palettes
+install.packages("syuzhet") # for sentiment analysis
+install.packages("ggplot2") # for plotting graphs
+# Load
+library("tm")
+library("SnowballC")
+library("wordcloud")
+library("RColorBrewer")
+library("syuzhet")
+library("ggplot2")
+#library(quanteda)
+
+rm(list=ls())
+negativo_w <- read_csv("Rstudio/Textanalysis/negativo_w.txt")
+
+positivo_w <- read_csv("Rstudio/Textanalysis/positivo_w.txt")
+
+cgpe_2010 <- read_csv("Rstudio/Textanalysis/cgpe_2010.txt")
+
+cgpe_2021 <- read_csv("Rstudio/Textanalysis/cgpe_2021.txt")
+
+negativo_r <- Corpus(VectorSource(negativo_w))
+positivo_r <- Corpus(VectorSource(positivo_w))
+cgpe_2010_r <- Corpus(VectorSource(cgpe_2010))
+cgpe_2021_r <- Corpus(VectorSource(cgpe_2021))
+
+toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+
+cgpe_2010_r <- tm_map(cgpe_2010_r, toSpace, "/")
+cgpe_2010_r <- tm_map(cgpe_2010_r, toSpace, "@")
+cgpe_2010_r <- tm_map(cgpe_2010_r, toSpace, "\\|")
+
+dtm <- TermDocumentMatrix(negativo_r)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+head(d, 10)
+
+wordcloud(words = d$word)
+library(readr)
+
+n_w <- read_delim("D:/Documentos/Rstudio/Textanalysis/negativo_w.txt", "\t", escape_double = FALSE, trim_ws = TRUE)
+D:\Documentos\Rstudio\Textanalysis
+
+##################################################
+
+setwd("D:/Documentos/Rstudio/Textanalysis/")
+if(!require(NLP))
+{install.packages("NLP", dependencies = TRUE)}
+
+if(!require(tm))
+{install.packages("tm", dependencies = TRUE)}
+
+if(!require(SnowballC))
+{install.packages("SnowballC", dependencies = TRUE)} 
+
+if(!require(wordcloud))
+{install.packages("wordcloud", dependencies = TRUE)} 
+
+if(!require(wordcloud2))
+{install.packages("wordcloud2", dependencies = TRUE)}
+
+if(!require(RColorBrewer))
+{install.packages("RColorBrewer", dependencies = TRUE)} 
+
+library("tm")
+library("SnowballC")
+library("wordcloud")
+library("RColorBrewer")
+
+negativo_w = iconv(negativo_w, to="ASCII//TRANSLIT"
