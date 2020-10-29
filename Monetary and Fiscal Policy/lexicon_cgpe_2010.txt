@@ -1,3 +1,9 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                            ;;
+;; CGPE 2010: Opinion Lexicon ;;
+;;                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 palabra	sentimiento	n
 reforma	positivo	
 crédito	positivo	
@@ -103,6 +109,7 @@ insuficiente	negativo
 limitado	negativo	
 ordenado	positivo	
 racional	positivo	
+epidemia	negativo	
 satisfacer	positivo	
 simplificar	positivo	
 sólido	positivo	
@@ -287,4 +294,5 @@ ventaja	positivo
 vicioso	negativo	
 víctima	negativo	
 virus	negativo	
+pandemia	negativo	
 vulnerable	negativo	
