@@ -1,8 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                            ;;
+;; CGPE 2021: Opinion Lexicon ;;
+;;                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 palabra	sentimiento	n
 deuda	negativo	
 económico	positivo	
 recuperación	positivo	
 crédito	positivo	
+pandemia	negativo	
 largo	negativo	
 disminución	negativo	
 riesgo	negativo	
