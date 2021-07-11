@@ -3,6 +3,7 @@
 ;; Stop Words (Spanish) ;;
 ;;                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
+; http://snowball.tartarus.org/algorithms/english/stop.txt
 	
 	
 	x
